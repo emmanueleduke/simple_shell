@@ -169,4 +169,5 @@ Thank you for going through our shell documentation.
 
 AUTHORS
 Juliet Ndlamini
+
 Eduke Emmanuel
