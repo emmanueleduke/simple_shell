@@ -30,8 +30,10 @@ int is_chain(info_t *info, char *buf, size_t *p)
 		info->cmd_buf_type = CMD_CHAIN;
 	}
 	else
+	{
 		return (0);
 		*p = j;
+	}
 	return (1);
 }
 
@@ -89,11 +91,15 @@ int replace_alias(info_t *info)
 		free(info->argv[0]);
 		p = _strchr(node->str, '=');
 		if (!p)
+		{
 			return (0);
 			p = _strdup(p + 1);
+		}
 		if (!p)
+		{
 			return (0);
 			info->argv[0] = p;
+		}
 	}
 	return (1);
 }
